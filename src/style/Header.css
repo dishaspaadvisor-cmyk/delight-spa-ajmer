@@ -1,0 +1,1311 @@
+
+
+:root {
+  --spa-blue: #8F0463;
+  --spa-blue-dark: #72034F;
+  --spa-blue-deep: #5E0644;
+
+  --spa-blue-light: #FCF0F7;
+  --spa-blue-soft: #F5DCEB;
+
+  --spa-white: #FFFFFF;
+  --spa-off-white: #FCF7FA;
+
+  --spa-text: #321326;
+  --spa-text-dark: #210B19;
+  --spa-muted: #806A79;
+
+  --spa-border: #E8D6E2;
+  --spa-border-light: #F3E8EF;
+
+  --spa-shadow: rgba(143, 4, 99, 0.10);
+  --spa-shadow-dark: rgba(143, 4, 99, 0.18);
+}
+
+
+/* =========================================================
+   MAIN HEADER
+   ========================================================= */
+
+.luxury-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  color: var(--spa-text);
+
+  border-bottom: 1px solid var(--spa-border);
+
+  box-shadow:
+    0 4px 20px rgba(143, 4, 99, 0.06);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    background 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+
+/* =========================================================
+   HEADER INNER
+   ========================================================= */
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1280px;
+
+  margin: 0 auto;
+
+  padding: 16px 32px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.brand-logo {
+  position: relative;
+
+  display: inline-flex;
+  flex-direction: column;
+
+  text-decoration: none;
+
+  color: var(--spa-blue-dark);
+
+  line-height: 1;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.brand-logo:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+
+/* =========================================================
+   BRAND MAIN
+   ========================================================= */
+
+.brand-main {
+  font-size: 25px;
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+
+  line-height: 1;
+
+  color: var(--spa-blue-dark);
+
+  white-space: nowrap;
+
+  transition: color 180ms ease;
+}
+
+.brand-logo:hover .brand-main {
+  color: var(--spa-blue);
+}
+
+
+/* =========================================================
+   BRAND SUBTITLE
+   ========================================================= */
+
+.brand-subtitle {
+  margin-top: 6px;
+
+  color: var(--spa-muted);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  line-height: 1.2;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   OPTIONAL LOGO IMAGE SUPPORT
+   If your header contains:
+   <img class="header-logo" />
+   ========================================================= */
+
+.header-logo {
+  display: block;
+
+  width: auto;
+  height: 52px;
+
+  object-fit: contain;
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.brand-logo:hover .header-logo {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   RESERVATION / PHONE LINKS
+   ========================================================= */
+
+.reservation-link,
+.phone-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 40px;
+
+  padding: 0 12px;
+
+  color: var(--spa-text);
+
+  background: transparent;
+
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.06em;
+
+  text-decoration: none;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.reservation-link:hover,
+.phone-link:hover {
+  color: var(--spa-blue-dark);
+
+  background: var(--spa-blue-light);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LINK ICON
+   ========================================================= */
+
+.reservation-link svg,
+.phone-link svg {
+  width: 17px;
+  height: 17px;
+
+  color: var(--spa-blue-dark);
+
+  flex-shrink: 0;
+
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.reservation-link:hover svg,
+.phone-link:hover svg {
+  color: var(--spa-blue);
+
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
+.menu-toggle,
+.slide-menu-top button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  color: var(--spa-blue-dark);
+
+  background: var(--spa-blue-light);
+
+  border: 1px solid var(--spa-border);
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.menu-toggle:hover,
+.slide-menu-top button:hover {
+  color: var(--spa-white);
+
+  background: var(--spa-blue-dark);
+
+  border-color: var(--spa-blue-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 7px 18px rgba(143, 4, 99, 0.20);
+}
+
+
+/* =========================================================
+   MENU ICON
+   ========================================================= */
+
+.menu-toggle svg,
+.slide-menu-top button svg {
+  width: 21px;
+  height: 21px;
+
+  stroke-width: 1.8;
+}
+
+
+/* =========================================================
+   FOCUS STATES
+   ========================================================= */
+
+.menu-toggle:focus-visible,
+.slide-menu-top button:focus-visible,
+.menu-book-btn:focus-visible,
+.reservation-link:focus-visible,
+.phone-link:focus-visible,
+.brand-logo:focus-visible,
+.slide-nav-link:focus-visible {
+  outline: 2px solid var(--spa-blue);
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.menu-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1100;
+
+  background:
+    rgba(94, 6, 68, 0.42);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  transition:
+    opacity 240ms ease,
+    visibility 240ms ease;
+}
+
+.menu-overlay.show {
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+}
+
+
+/* =========================================================
+   SLIDE MENU
+   ========================================================= */
+
+.slide-menu {
+  position: fixed;
+
+  inset: 0 0 0 auto;
+
+  z-index: 1200;
+
+  display: flex;
+  flex-direction: column;
+
+  width: min(430px, 90vw);
+
+  min-height: 100vh;
+
+  padding: 30px 34px;
+
+  box-sizing: border-box;
+
+  color: var(--spa-text);
+
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #FCF7FA 100%
+    );
+
+  border-left: 1px solid var(--spa-border);
+
+  box-shadow:
+    -18px 0 50px rgba(143, 4, 99, 0.14);
+
+  transform: translateX(100%);
+
+  transition:
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slide-menu.open {
+  transform: translateX(0);
+}
+
+
+/* =========================================================
+   SLIDE MENU TOP
+   ========================================================= */
+
+.slide-menu-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-bottom: 24px;
+
+  border-bottom: 1px solid var(--spa-border);
+
+  color: var(--spa-blue-dark);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MENU TOP TITLE
+   ========================================================= */
+
+.slide-menu-top span,
+.slide-menu-top p {
+  margin: 0;
+
+  color: var(--spa-blue-dark);
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
+
+.slide-menu-top button {
+  width: 40px;
+  height: 40px;
+
+  color: var(--spa-blue-dark);
+
+  background: var(--spa-blue-light);
+
+  border-color: var(--spa-border);
+}
+
+.slide-menu-top button:hover {
+  color: var(--spa-white);
+
+  background: var(--spa-blue-dark);
+
+  border-color: var(--spa-blue-dark);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.slide-navigation {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-top: 20px;
+}
+
+
+/* =========================================================
+   NAV LINK
+   ========================================================= */
+
+.slide-nav-link {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 42px 1fr auto;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 18px 4px;
+
+  color: var(--spa-text);
+
+  border-bottom: 1px solid var(--spa-border-light);
+
+  text-decoration: none;
+
+  transform: translateX(25px);
+
+  opacity: 0;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    opacity 240ms ease,
+    transform 240ms ease,
+    padding 180ms ease;
+}
+
+
+/* =========================================================
+   MENU OPEN ANIMATION
+   ========================================================= */
+
+.slide-menu.open .slide-nav-link {
+  transform: translateX(0);
+
+  opacity: 1;
+
+  transition-delay:
+    calc(var(--item-index) * 45ms + 70ms);
+}
+
+
+/* =========================================================
+   NAV HOVER
+   ========================================================= */
+
+.slide-nav-link:hover,
+.slide-nav-link.current {
+  color: var(--spa-blue-dark);
+
+  padding-left: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--spa-blue-light),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   NAV ACTIVE LEFT LINE
+   ========================================================= */
+
+.slide-nav-link::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 3px;
+  height: 0;
+
+  border-radius: 3px;
+
+  background: var(--spa-blue);
+
+  transform: translateY(-50%);
+
+  transition:
+    height 180ms ease;
+}
+
+.slide-nav-link:hover::before,
+.slide-nav-link.current::before {
+  height: 24px;
+}
+
+
+/* =========================================================
+   NAV NUMBER
+   ========================================================= */
+
+.nav-number {
+  color: var(--spa-blue);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   NAV NAME
+   ========================================================= */
+
+.nav-name {
+  color: inherit;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.02em;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   NAV ARROW
+   ========================================================= */
+
+.nav-arrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: var(--spa-blue);
+
+  transition:
+    transform 180ms ease,
+    color 180ms ease;
+}
+
+.nav-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+.slide-nav-link:hover .nav-arrow {
+  color: var(--spa-blue-dark);
+
+  transform: translate(4px, -3px);
+}
+
+
+/* =========================================================
+   MENU BOTTOM
+   ========================================================= */
+
+.slide-menu-bottom {
+  margin-top: auto;
+
+  padding-top: 30px;
+}
+
+
+/* =========================================================
+   MENU BOTTOM TEXT
+   ========================================================= */
+
+.slide-menu-bottom p {
+  margin: 0 0 16px;
+
+  color: var(--spa-muted);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  line-height: 1.6;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   BOOK BUTTON
+   ========================================================= */
+
+.menu-book-btn {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 46px;
+
+  padding: 0 20px;
+
+  color: var(--spa-white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--spa-blue),
+      var(--spa-blue-dark)
+    );
+
+  border: 1px solid var(--spa-blue);
+
+  border-radius: 8px;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.07em;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 22px rgba(143, 4, 99, 0.18);
+
+  overflow: hidden;
+
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+
+/* =========================================================
+   BUTTON SHINE
+   ========================================================= */
+
+.menu-book-btn::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 80%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.30),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition: left 500ms ease;
+}
+
+.menu-book-btn:hover::before {
+  left: 130%;
+}
+
+
+/* =========================================================
+   BOOK BUTTON HOVER
+   ========================================================= */
+
+.menu-book-btn:hover {
+  color: var(--spa-white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--spa-blue-dark),
+      var(--spa-blue-deep)
+    );
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(143, 4, 99, 0.25);
+}
+
+
+/* =========================================================
+   BOOK BUTTON ICON
+   ========================================================= */
+
+.menu-book-btn svg {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .header-inner {
+    padding: 15px 24px;
+  }
+
+  .brand-main {
+    font-size: 23px;
+  }
+
+  .header-actions {
+    gap: 8px;
+  }
+
+  .reservation-link,
+  .phone-link {
+    padding: 0 9px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .luxury-header {
+    box-shadow:
+      0 3px 16px rgba(7, 111, 165, 0.08);
+  }
+
+
+  .header-inner {
+    padding: 13px 18px;
+
+    gap: 12px;
+  }
+
+
+  .brand-main {
+    font-size: 21px;
+
+    letter-spacing: -0.02em;
+  }
+
+
+  .brand-subtitle {
+    margin-top: 4px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.17em;
+  }
+
+
+  .header-logo {
+    height: 44px;
+  }
+
+
+  .reservation-link span,
+  .phone-link span {
+    display: none;
+  }
+
+
+  .reservation-link,
+  .phone-link {
+    width: 38px;
+    height: 38px;
+
+    min-height: 38px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: var(--spa-blue-light);
+  }
+
+
+  .reservation-link svg,
+  .phone-link svg {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  .header-actions {
+    gap: 7px;
+  }
+
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+
+  .menu-toggle svg {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .slide-menu {
+    width: min(400px, 92vw);
+
+    padding: 24px 20px;
+  }
+
+
+  .slide-menu-top {
+    padding-bottom: 20px;
+  }
+
+
+  .slide-navigation {
+    padding-top: 15px;
+  }
+
+
+  .slide-nav-link {
+    grid-template-columns: 34px 1fr auto;
+
+    padding: 16px 3px;
+  }
+
+
+  .nav-name {
+    font-size: 21px;
+  }
+
+
+  .nav-number {
+    font-size: 10px;
+  }
+
+
+  .slide-menu-bottom {
+    padding-top: 24px;
+  }
+
+
+  .menu-book-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .header-inner {
+    padding: 12px 14px;
+  }
+
+
+  .brand-main {
+    font-size: 19px;
+  }
+
+
+  .brand-subtitle {
+    font-size: 6.5px;
+  }
+
+
+  .reservation-link,
+  .phone-link {
+    width: 35px;
+    height: 35px;
+
+    min-height: 35px;
+  }
+
+
+  .menu-toggle {
+    width: 37px;
+    height: 37px;
+  }
+
+
+  .header-actions {
+    gap: 5px;
+  }
+
+
+  .slide-menu {
+    width: 94vw;
+
+    padding: 22px 18px;
+  }
+
+
+  .nav-name {
+    font-size: 20px;
+  }
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .header-inner {
+    max-width: 1360px;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .brand-main {
+    font-size: 27px;
+  }
+
+  .brand-subtitle {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .luxury-header,
+  .brand-logo,
+  .brand-main,
+  .header-logo,
+  .reservation-link,
+  .phone-link,
+  .menu-toggle,
+  .slide-menu-top button,
+  .menu-overlay,
+  .slide-menu,
+  .slide-nav-link,
+  .nav-arrow,
+  .menu-book-btn,
+  .menu-book-btn::before {
+    transition: none !important;
+  }
+
+  .slide-menu.open .slide-nav-link {
+    transition-delay: 0ms !important;
+  }
+}
+
+
+/* =========================================================
+   DELIGHT SPA AJMER — PREMIUM HEADER OVERRIDES
+   Logo-led palette: Deep Magenta + Plum + Champagne
+   ========================================================= */
+
+.luxury-header {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(252,247,250,.96));
+  border-bottom: 1px solid rgba(143, 4, 99, .12);
+  box-shadow:
+    0 8px 30px rgba(94, 6, 68, .07),
+    0 1px 0 rgba(255,255,255,.9) inset;
+}
+
+.header-inner {
+  min-height: 78px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Logo */
+.brand-logo {
+  color: #8F0463;
+  gap: 2px;
+}
+
+.brand-main {
+  color: #8F0463;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.brand-logo:hover .brand-main {
+  color: #72034F;
+}
+
+.brand-subtitle {
+  color: #806A79;
+  letter-spacing: .24em;
+}
+
+/* Actual logo image */
+.header-logo {
+  height: 58px;
+  max-width: 220px;
+  filter: drop-shadow(0 5px 12px rgba(94, 6, 68, .08));
+}
+
+/* Header action links */
+.reservation-link,
+.phone-link {
+  min-height: 42px;
+  padding: 0 14px;
+  color: #321326;
+  background: rgba(143, 4, 99, .035);
+  border: 1px solid rgba(143, 4, 99, .11);
+  border-radius: 999px;
+}
+
+.reservation-link:hover,
+.phone-link:hover {
+  color: #FFFFFF;
+  background: #8F0463;
+  border-color: #8F0463;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(143, 4, 99, .16);
+}
+
+.reservation-link svg,
+.phone-link svg {
+  color: #8F0463;
+}
+
+.reservation-link:hover svg,
+.phone-link:hover svg {
+  color: #FFFFFF;
+}
+
+/* Menu button — stronger brand CTA */
+.menu-toggle,
+.slide-menu-top button {
+  width: 44px;
+  height: 44px;
+  color: #FFFFFF;
+  background: linear-gradient(145deg, #8F0463, #72034F);
+  border: 1px solid #8F0463;
+  box-shadow: 0 7px 18px rgba(143, 4, 99, .18);
+}
+
+.menu-toggle:hover,
+.slide-menu-top button:hover {
+  color: #FFFFFF;
+  background: linear-gradient(145deg, #72034F, #5E0644);
+  border-color: #72034F;
+  box-shadow: 0 10px 24px rgba(143, 4, 99, .24);
+}
+
+/* Drawer */
+.slide-menu {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(143,4,99,.07), transparent 34%),
+    linear-gradient(180deg, #FFFFFF 0%, #FCF7FA 100%);
+  border-left: 1px solid rgba(143, 4, 99, .12);
+  box-shadow: -24px 0 60px rgba(94, 6, 68, .16);
+}
+
+.slide-menu-top {
+  color: #72034F;
+  border-bottom-color: #E8D6E2;
+}
+
+.slide-menu-top span,
+.slide-menu-top p {
+  color: #72034F;
+}
+
+/* Drawer navigation */
+.slide-nav-link {
+  color: #321326;
+  border-bottom-color: #F3E8EF;
+}
+
+.slide-nav-link:hover,
+.slide-nav-link.current {
+  color: #72034F;
+  background:
+    linear-gradient(90deg, rgba(143,4,99,.09), transparent);
+}
+
+.slide-nav-link::before {
+  background: #8F0463;
+}
+
+.nav-number,
+.nav-arrow {
+  color: #8F0463;
+}
+
+.slide-nav-link:hover .nav-arrow {
+  color: #72034F;
+}
+
+/* Premium booking CTA */
+.menu-book-btn {
+  color: #FFFFFF;
+  background:
+    linear-gradient(135deg, #8F0463 0%, #72034F 70%, #5E0644 100%);
+  border-color: #8F0463;
+  border-radius: 999px;
+  box-shadow: 0 10px 28px rgba(143, 4, 99, .20);
+}
+
+.menu-book-btn:hover {
+  color: #FFFFFF;
+  background:
+    linear-gradient(135deg, #72034F 0%, #5E0644 100%);
+  border-color: #72034F;
+  box-shadow: 0 14px 34px rgba(143, 4, 99, .28);
+}
+
+.menu-book-btn::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.18);
+}
+
+/* Keyboard accessibility */
+.menu-toggle:focus-visible,
+.slide-menu-top button:focus-visible,
+.menu-book-btn:focus-visible,
+.reservation-link:focus-visible,
+.phone-link:focus-visible,
+.brand-logo:focus-visible,
+.slide-nav-link:focus-visible {
+  outline-color: #C9A45C;
+}
+
+/* Mobile header */
+@media (max-width: 700px) {
+  .luxury-header {
+    box-shadow: 0 5px 22px rgba(94, 6, 68, .09);
+  }
+
+  .header-inner {
+    min-height: 66px;
+    padding: 10px 16px;
+  }
+
+  .header-logo {
+    height: 45px;
+    max-width: 175px;
+  }
+
+  .reservation-link,
+  .phone-link {
+    background: #FCF0F7;
+    border-color: #E8D6E2;
+  }
+
+  .menu-toggle {
+    background: linear-gradient(145deg, #8F0463, #72034F);
+  }
+}
+
+@media (max-width: 420px) {
+  .header-inner {
+    padding: 9px 12px;
+  }
+
+  .header-logo {
+    height: 40px;
+    max-width: 155px;
+  }
+
+  .reservation-link,
+  .phone-link {
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Champagne accent for subtle luxury details */
+.slide-menu-bottom::before {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 2px;
+  margin-bottom: 18px;
+  background: #C9A45C;
+  border-radius: 99px;
+}

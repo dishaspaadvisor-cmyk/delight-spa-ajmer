@@ -1,0 +1,1490 @@
+/* =========================================================
+   Delight Spa — OFFERS SECTION
+   Premium Blue / White Luxury Theme
+========================================================= */
+
+:root {
+  --villa-sky: #8F0463;
+  --villa-blue: #72034F;
+  --villa-deep: #5E0644;
+
+  --villa-light: #FCF0F7;
+  --villa-soft: #F5DCEB;
+  --villa-white: #FFFFFF;
+
+  --villa-text: #321326;
+  --villa-dark: #210B19;
+  --villa-muted: #806A79;
+
+  --villa-border: #E8D6E2;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.offers-section {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(143, 4, 99, 0.075),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(94, 6, 68, 0.07),
+      transparent 30%
+    ),
+    var(--villa-light);
+
+  color: var(--villa-text);
+
+  padding: 140px 0 130px;
+}
+
+
+/* Decorative background glow */
+
+.offers-section::before {
+  content: "";
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  top: -220px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(143, 4, 99, 0.065);
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+
+.offers-section::after {
+  content: "";
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  bottom: -170px;
+  left: -130px;
+
+  border-radius: 50%;
+
+  background: rgba(94, 6, 68, 0.07);
+
+  filter: blur(8px);
+
+  pointer-events: none;
+}
+
+
+.offers-container {
+  position: relative;
+  z-index: 2;
+
+  width: min(1220px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.offers-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 75px;
+}
+
+
+.offers-heading-content {
+  max-width: 650px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.offers-eyebrow {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  margin: 0 0 22px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  color: var(--villa-blue);
+}
+
+
+/* Small premium line */
+
+.offers-eyebrow::before {
+  content: "";
+
+  width: 30px;
+  height: 1px;
+
+  background: var(--villa-sky);
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.offers-title {
+  margin: 0 0 20px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(44px, 5vw, 68px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+
+  color: var(--villa-dark);
+}
+
+
+/* =========================================================
+   SUBTITLE
+========================================================= */
+
+.offers-subtitle {
+  max-width: 480px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: var(--villa-muted);
+}
+
+
+/* =========================================================
+   HEADER SYMBOL
+========================================================= */
+
+.offers-header-symbol {
+  position: relative;
+
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--villa-border);
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.72);
+
+  color: var(--villa-blue);
+
+  font-size: 26px;
+
+  box-shadow:
+    0 15px 35px rgba(94, 6, 68, 0.08);
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.offers-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 32px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.offer-card {
+  position: relative;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  background: var(--villa-white);
+
+  color: var(--villa-text);
+
+  border: 1px solid var(--villa-border);
+
+  box-shadow:
+    0 15px 45px rgba(94, 6, 68, 0.075);
+
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease,
+    border-color 0.4s ease;
+}
+
+
+.offer-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(143, 4, 99, 0.45);
+
+  box-shadow:
+    0 28px 65px rgba(94, 6, 68, 0.14);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.offer-image-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 480px;
+
+  background: var(--villa-soft);
+}
+
+
+.offer-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center top;
+
+  transition:
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+}
+
+
+.offer-card:hover .offer-image {
+  transform: scale(1.06);
+
+  filter: saturate(1.04) contrast(1.02);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.offer-image-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(94, 6, 68, 0.08),
+      transparent 45%,
+      rgba(26, 7, 21, 0.42)
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   IMAGE LABELS
+========================================================= */
+
+.offer-tag {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  padding: 8px 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+
+  background: rgba(94, 6, 68, 0.80);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  color: var(--villa-white);
+
+  text-transform: uppercase;
+}
+
+
+.offer-index {
+  position: absolute;
+
+  right: 20px;
+  bottom: 20px;
+
+  font-size: 11px;
+
+  font-weight: 500;
+
+  letter-spacing: 2px;
+
+  color: var(--villa-white);
+}
+
+
+/* =========================================================
+   IMAGE BOTTOM FADE
+========================================================= */
+
+.offer-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 100px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(26, 7, 21, 0.34),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.offer-content {
+  padding: 30px 28px 32px;
+}
+
+
+/* =========================================================
+   OFFER SUBTITLE
+========================================================= */
+
+.offer-content .offer-subtitle {
+  margin: 0 0 12px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  color: var(--villa-blue);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.offer-card-title {
+  margin: 0 0 18px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+
+  color: var(--villa-dark);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.offer-description {
+  margin: 0 0 25px;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+
+  color: var(--villa-muted);
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.offer-price-row {
+  display: flex;
+
+  align-items: baseline;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 25px;
+}
+
+
+.offer-old-price {
+  font-size: 13px;
+
+  color: #8EA6B5;
+
+  text-decoration: line-through;
+}
+
+
+.offer-current-price {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  color: var(--villa-blue);
+}
+
+
+.offer-duration {
+  font-size: 10px;
+
+  letter-spacing: 1px;
+
+  color: var(--villa-muted);
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.offer-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+
+.offer-call-btn,
+.offer-whatsapp-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 46px;
+
+  padding: 13px 14px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  border-radius: 2px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.offer-call-btn {
+  flex: 1;
+
+  background: var(--villa-deep);
+
+  color: var(--villa-white);
+
+  border: 1px solid var(--villa-deep);
+}
+
+
+.offer-call-btn:hover {
+  background: var(--villa-blue);
+
+  color: var(--villa-white);
+
+  border-color: var(--villa-blue);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(143, 4, 99, 0.20);
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.offer-whatsapp-btn {
+  flex: 1;
+
+  background: var(--villa-light);
+
+  color: var(--villa-deep);
+
+  border: 1px solid var(--villa-border);
+}
+
+
+.offer-whatsapp-btn:hover {
+  background: #DDF6E9;
+
+  color: #168454;
+
+  border-color: #B9E8D0;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(22, 132, 84, 0.10);
+}
+
+
+/* =========================================================
+   BUTTON ICON
+========================================================= */
+
+.offer-call-btn svg,
+.offer-whatsapp-btn svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+
+  transition: transform 0.3s ease;
+}
+
+
+.offer-call-btn:hover svg,
+.offer-whatsapp-btn:hover svg {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+========================================================= */
+
+.offers-bottom-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 100px;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  color: var(--villa-blue);
+
+  text-transform: uppercase;
+}
+
+
+.offers-bottom-line div {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(143, 4, 99, 0.40),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   CARD HOVER ACCENT
+========================================================= */
+
+.offer-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--villa-deep),
+      var(--villa-sky),
+      var(--villa-blue)
+    );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.5s ease;
+
+  z-index: 5;
+}
+
+
+.offer-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   TABLET / LAPTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .offers-grid {
+    gap: 20px;
+  }
+
+  .offer-content {
+    padding: 25px 20px 28px;
+  }
+
+  .offer-card-title {
+    font-size: 27px;
+  }
+
+  .offer-actions {
+    flex-direction: column;
+  }
+
+  .offer-call-btn,
+  .offer-whatsapp-btn {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .offers-section {
+    padding: 90px 0 80px;
+  }
+
+
+  .offers-container {
+    width: calc(100% - 40px);
+  }
+
+
+  .offers-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+  }
+
+
+  .offers-title {
+    font-size: 46px;
+
+    letter-spacing: -1px;
+  }
+
+
+  .offers-subtitle {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+
+  .offers-header-symbol {
+    width: 58px;
+    height: 58px;
+
+    font-size: 22px;
+  }
+
+
+  .offers-grid {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+
+  /* Original image ratio: 1156 x 1515 */
+
+  .offer-image-wrapper {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1156 / 1515;
+
+    overflow: hidden;
+  }
+
+
+  .offer-image-wrapper img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  .offer-content {
+    padding: 28px 22px 30px;
+  }
+
+
+  .offer-card-title {
+    font-size: 34px;
+  }
+
+
+  .offer-description {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+
+  .offer-actions {
+    flex-direction: row;
+  }
+
+
+  .offer-call-btn,
+  .offer-whatsapp-btn {
+    flex: 1;
+
+    width: auto;
+  }
+
+
+  .offers-bottom-line {
+    margin-top: 70px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .offers-section {
+    padding: 75px 0 65px;
+  }
+
+
+  .offers-container {
+    width: calc(100% - 30px);
+  }
+
+
+  .offers-title {
+    font-size: 40px;
+
+    line-height: 1.08;
+  }
+
+
+  .offers-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+
+  /* Maintain 1156 x 1515 image ratio */
+
+  .offer-image-wrapper {
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1156 / 1515;
+  }
+
+
+  .offer-image-wrapper img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+  }
+
+
+  .offer-content {
+    padding: 25px 20px 28px;
+  }
+
+
+  .offer-card-title {
+    font-size: 30px;
+  }
+
+
+  .offer-description {
+    font-size: 12px;
+  }
+
+
+  .offer-price-row {
+    gap: 7px;
+  }
+
+
+  .offer-current-price {
+    font-size: 23px;
+  }
+
+
+  .offer-actions {
+    gap: 8px;
+  }
+
+
+  .offer-call-btn,
+  .offer-whatsapp-btn {
+    flex: 1;
+
+    min-height: 44px;
+
+    padding: 13px 8px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+  }
+
+
+  .offer-call-btn svg,
+  .offer-whatsapp-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+
+  .offers-bottom-line {
+    gap: 15px;
+
+    margin-top: 60px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+
+  .offers-bottom-line span:last-child {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .offers-container {
+    width: calc(100% - 24px);
+  }
+
+
+  .offers-title {
+    font-size: 35px;
+  }
+
+
+  .offer-content {
+    padding: 22px 17px 25px;
+  }
+
+
+  .offer-card-title {
+    font-size: 27px;
+  }
+
+
+  .offer-actions {
+    gap: 6px;
+  }
+
+
+  .offer-call-btn,
+  .offer-whatsapp-btn {
+    padding-left: 6px;
+    padding-right: 6px;
+
+    font-size: 7.5px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .offer-image,
+  .offer-card,
+  .offer-call-btn,
+  .offer-whatsapp-btn,
+  .offer-card::before {
+    transition: none;
+  }
+
+
+  .offer-card:hover {
+    transform: none;
+  }
+
+
+  .offer-card:hover .offer-image {
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   DELIGHT SPA AJMER — SIGNATURE PREMIUM OFFERS
+   Logo-led palette:
+   Magenta #8F0463
+   Plum    #72034F
+   Deep    #5E0644
+   Gold    #C9A45C
+   ========================================================= */
+
+.offers-section {
+  padding: 145px 0 135px;
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(143, 4, 99, .07),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 86%,
+      rgba(201, 164, 92, .055),
+      transparent 26%
+    ),
+    linear-gradient(
+      180deg,
+      #FCF7FA 0%,
+      #FFFFFF 50%,
+      #FCF7FA 100%
+    );
+}
+
+.offers-section::before {
+  width: 480px;
+  height: 480px;
+  background:
+    radial-gradient(
+      circle,
+      rgba(143, 4, 99, .08),
+      rgba(143, 4, 99, .025) 46%,
+      transparent 72%
+    );
+  filter: blur(4px);
+}
+
+.offers-section::after {
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 164, 92, .07),
+      transparent 70%
+    );
+}
+
+/* Header */
+.offers-header {
+  margin-bottom: 82px;
+}
+
+.offers-heading-content {
+  max-width: 720px;
+}
+
+.offers-eyebrow {
+  color: #8F0463;
+  letter-spacing: 4.2px;
+}
+
+.offers-eyebrow::before {
+  width: 34px;
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+.offers-title {
+  color: #210B19;
+  font-size: clamp(46px, 5.2vw, 72px);
+  letter-spacing: -2.6px;
+}
+
+.offers-title::after {
+  content: "";
+  display: block;
+  width: 58px;
+  height: 2px;
+  margin-top: 24px;
+  background: linear-gradient(
+    90deg,
+    #C9A45C,
+    #8F0463
+  );
+}
+
+.offers-subtitle {
+  color: #806A79;
+  max-width: 540px;
+  line-height: 1.9;
+}
+
+.offers-header-symbol {
+  width: 76px;
+  height: 76px;
+  color: #8F0463;
+  background:
+    linear-gradient(
+      145deg,
+      #FFFFFF,
+      #FCF0F7
+    );
+  border: 1px solid rgba(143, 4, 99, .18);
+  box-shadow:
+    0 18px 40px rgba(94, 6, 68, .10),
+    inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+/* Offer cards */
+.offers-grid {
+  gap: 34px;
+}
+
+.offer-card {
+  background:
+    linear-gradient(
+      180deg,
+      #FFFFFF 0%,
+      #FFFDFE 100%
+    );
+  border: 1px solid #E8D6E2;
+  border-radius: 14px;
+  box-shadow:
+    0 18px 50px rgba(94, 6, 68, .075);
+}
+
+.offer-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(143, 4, 99, .28);
+  box-shadow:
+    0 32px 75px rgba(94, 6, 68, .15);
+}
+
+/* Gold top accent */
+.offer-card::before {
+  height: 3px;
+  background:
+    linear-gradient(
+      90deg,
+      #8F0463,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+/* Images */
+.offer-image-wrapper {
+  height: 490px;
+  background: #FCF0F7;
+}
+
+.offer-image {
+  filter: saturate(.92) contrast(1.01);
+}
+
+.offer-card:hover .offer-image {
+  transform: scale(1.065);
+  filter: saturate(1.04) contrast(1.03);
+}
+
+.offer-image-overlay {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(94, 6, 68, .04),
+      transparent 42%,
+      rgba(26, 7, 21, .54)
+    );
+}
+
+.offer-tag {
+  top: 18px;
+  left: 18px;
+  padding: 9px 14px;
+  background: rgba(94, 6, 68, .82);
+  border: 1px solid rgba(255,255,255,.34);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(26, 7, 21, .14);
+}
+
+.offer-index {
+  right: 20px;
+  bottom: 18px;
+  color: rgba(255,255,255,.92);
+}
+
+.offer-image-wrapper::after {
+  height: 130px;
+  background:
+    linear-gradient(
+      to top,
+      rgba(26, 7, 21, .38),
+      transparent
+    );
+}
+
+/* Content */
+.offer-content {
+  padding: 32px 29px 34px;
+}
+
+.offer-content .offer-subtitle {
+  color: #8F0463;
+  letter-spacing: 2.3px;
+}
+
+.offer-card-title {
+  color: #210B19;
+  font-size: 34px;
+  letter-spacing: -1.2px;
+}
+
+.offer-description {
+  color: #806A79;
+}
+
+.offer-price-row {
+  margin-bottom: 27px;
+}
+
+.offer-old-price {
+  color: #A995A3;
+}
+
+.offer-current-price {
+  color: #8F0463;
+  font-size: 27px;
+}
+
+.offer-duration {
+  color: #806A79;
+}
+
+/* Buttons */
+.offer-actions {
+  gap: 9px;
+}
+
+.offer-call-btn,
+.offer-whatsapp-btn {
+  min-height: 48px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.offer-call-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #8F0463,
+      #72034F 65%,
+      #5E0644
+    );
+  color: #FFFFFF;
+  border: 1px solid #8F0463;
+  box-shadow:
+    0 8px 22px rgba(143, 4, 99, .18);
+}
+
+.offer-call-btn:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #72034F,
+      #5E0644
+    );
+  color: #FFFFFF;
+  border-color: #72034F;
+  box-shadow:
+    0 12px 28px rgba(143, 4, 99, .25);
+}
+
+.offer-whatsapp-btn {
+  background: #FFFFFF;
+  color: #72034F;
+  border: 1px solid #E8D6E2;
+}
+
+.offer-whatsapp-btn:hover {
+  background: #FCF7FA;
+  color: #72034F;
+  border-color: #C86AA6;
+  box-shadow:
+    0 8px 20px rgba(143, 4, 99, .09);
+}
+
+/* Bottom signature */
+.offers-bottom-line {
+  margin-top: 110px;
+  color: #8F0463;
+}
+
+.offers-bottom-line div {
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      rgba(143, 4, 99, .28),
+      rgba(201, 164, 92, .72),
+      rgba(143, 4, 99, .28),
+      transparent
+    );
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+  .offers-grid {
+    gap: 22px;
+  }
+
+  .offer-card-title {
+    font-size: 29px;
+  }
+
+  .offer-content {
+    padding: 27px 21px 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .offers-section {
+    padding: 92px 0 82px;
+  }
+
+  .offers-container {
+    width: calc(100% - 36px);
+  }
+
+  .offers-header {
+    margin-bottom: 52px;
+    gap: 28px;
+  }
+
+  .offers-title {
+    font-size: 46px;
+    letter-spacing: -1.6px;
+  }
+
+  .offers-title::after {
+    width: 48px;
+    margin-top: 20px;
+  }
+
+  .offers-header-symbol {
+    width: 60px;
+    height: 60px;
+  }
+
+  .offers-grid {
+    gap: 34px;
+  }
+
+  .offer-card {
+    border-radius: 12px;
+  }
+
+  .offer-image-wrapper {
+    height: auto;
+    aspect-ratio: 1156 / 1515;
+  }
+
+  .offer-content {
+    padding: 29px 22px 31px;
+  }
+
+  .offer-card-title {
+    font-size: 34px;
+  }
+
+  .offer-actions {
+    flex-direction: row;
+  }
+
+  .offer-call-btn,
+  .offer-whatsapp-btn {
+    flex: 1;
+    min-height: 47px;
+  }
+
+  .offers-bottom-line {
+    margin-top: 72px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .offers-section {
+    padding: 78px 0 68px;
+  }
+
+  .offers-container {
+    width: calc(100% - 28px);
+  }
+
+  .offers-title {
+    font-size: 40px;
+  }
+
+  .offers-eyebrow {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .offer-content {
+    padding: 25px 19px 28px;
+  }
+
+  .offer-card-title {
+    font-size: 30px;
+  }
+
+  .offer-current-price {
+    font-size: 24px;
+  }
+
+  .offer-call-btn,
+  .offer-whatsapp-btn {
+    min-height: 45px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 8px;
+  }
+
+  .offers-bottom-line {
+    margin-top: 62px;
+  }
+}
+

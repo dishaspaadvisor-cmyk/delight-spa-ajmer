@@ -1,0 +1,640 @@
+/* =========================================================
+   DELIGHT SPA AJMER — MAP SECTION
+   Premium Magenta / Plum / Champagne Theme
+========================================================= */
+
+.map-section {
+  position: relative;
+  padding: 0 24px 120px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(143, 4, 99, 0.07),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(201, 164, 92, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #fcf7fa 55%,
+      #f9eef5 100%
+    );
+
+  color: #321326;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.map-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  top: -270px;
+  right: -190px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(143, 4, 99, 0.10),
+      transparent 68%
+    );
+
+  border: 1px solid rgba(143, 4, 99, 0.04);
+
+  pointer-events: none;
+}
+
+.map-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  bottom: -190px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 164, 92, 0.12),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.map-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1180px, 100%);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   MAP HEADER
+========================================================= */
+
+.map-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-bottom: 38px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.map-eyebrow {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 16px;
+
+  color: #8F0463;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 3.2px;
+
+  text-transform: uppercase;
+}
+
+.map-eyebrow::before {
+  content: "";
+
+  width: 34px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.map-header h2 {
+  margin: 0;
+
+  color: #210B19;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(38px, 4vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.8px;
+}
+
+.map-header h2 em {
+  color: #8F0463;
+
+  font-style: italic;
+
+  text-decoration: underline;
+
+  text-decoration-color: #E5CC98;
+
+  text-decoration-thickness: 1px;
+
+  text-underline-offset: 7px;
+}
+
+
+/* =========================================================
+   DIRECTIONS BUTTON
+========================================================= */
+
+.map-directions-button {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  min-height: 48px;
+
+  padding: 0 20px;
+
+  color: #72034F;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+
+  text-decoration: none;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E8D6E2;
+
+  box-shadow:
+    0 8px 22px rgba(94, 6, 68, 0.06);
+
+  transition:
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.map-directions-button:hover {
+  color: #FFFFFF;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8F0463,
+      #72034F
+    );
+
+  border-color: #8F0463;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 28px rgba(143, 4, 99, 0.18);
+}
+
+
+/* =========================================================
+   MAP FRAME
+========================================================= */
+
+.map-frame-wrapper {
+  position: relative;
+
+  min-height: 430px;
+
+  overflow: hidden;
+
+  background: #F8EAF3;
+
+  border: 1px solid #E8D6E2;
+
+  box-shadow:
+    0 28px 65px rgba(94, 6, 68, 0.12);
+
+  isolation: isolate;
+}
+
+
+/* =========================================================
+   MAP IMAGE / IFRAME
+========================================================= */
+
+.map-frame-wrapper iframe {
+  display: block;
+
+  width: 100%;
+
+  height: 430px;
+
+  border: 0;
+
+  /*
+    Keep the map elegant and slightly muted
+    so the magenta UI remains the visual focus.
+  */
+
+  filter:
+    grayscale(0.55)
+    contrast(0.96)
+    saturate(0.82);
+}
+
+
+/* =========================================================
+   MAP TOP ACCENT
+========================================================= */
+
+.map-frame-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  z-index: 4;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5E0644 0%,
+      #8F0463 42%,
+      #C9A45C 72%,
+      #8F0463 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MAP INNER BORDER
+========================================================= */
+
+.map-frame-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 14px;
+
+  z-index: 3;
+
+  border: 1px solid rgba(201, 164, 92, 0.42);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LOCATION CARD
+========================================================= */
+
+.map-location-card {
+  position: absolute;
+
+  bottom: 28px;
+  left: 28px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  max-width: 380px;
+
+  padding: 19px 21px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  border: 1px solid rgba(232, 214, 226, 0.95);
+
+  box-shadow:
+    0 15px 40px rgba(33, 11, 25, 0.16);
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* =========================================================
+   LOCATION ICON
+========================================================= */
+
+.map-location-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 40px;
+
+  width: 40px;
+
+  height: 40px;
+
+  color: #FFFFFF;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8F0463,
+      #5E0644
+    );
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 7px 18px rgba(143, 4, 99, 0.22);
+}
+
+
+/* =========================================================
+   LOCATION TITLE
+========================================================= */
+
+.map-location-card strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #210B19;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 400;
+
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   LOCATION DESCRIPTION
+========================================================= */
+
+.map-location-card p {
+  margin: 0;
+
+  color: #806A79;
+
+  font-size: 11px;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   GOLD DETAIL LINE
+========================================================= */
+
+.map-location-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 20px;
+
+  width: 45px;
+
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .map-section {
+    padding: 0 18px 75px;
+
+    background:
+      radial-gradient(
+        circle at 15% 10%,
+        rgba(143, 4, 99, 0.07),
+        transparent 35%
+      ),
+      linear-gradient(
+        145deg,
+        #FFFFFF,
+        #FCF7FA
+      );
+  }
+
+  .map-header {
+    display: block;
+
+    margin-bottom: 27px;
+  }
+
+  .map-eyebrow {
+    margin-bottom: 13px;
+
+    letter-spacing: 2.8px;
+  }
+
+  .map-header h2 {
+    font-size: 40px;
+
+    letter-spacing: -1px;
+  }
+
+  .map-directions-button {
+    width: 100%;
+
+    margin-top: 22px;
+  }
+
+  .map-frame-wrapper {
+    min-height: 400px;
+  }
+
+  .map-frame-wrapper iframe {
+    height: 400px;
+  }
+
+  .map-frame-wrapper::after {
+    inset: 9px;
+  }
+
+  .map-location-card {
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+
+    max-width: none;
+
+    gap: 11px;
+
+    padding: 15px;
+  }
+
+  .map-location-icon {
+    flex: 0 0 35px;
+
+    width: 35px;
+    height: 35px;
+  }
+
+  .map-location-card strong {
+    font-size: 15px;
+  }
+
+  .map-location-card p {
+    font-size: 10px;
+
+    line-height: 1.55;
+  }
+
+  .map-location-card::before {
+    left: 15px;
+
+    width: 38px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .map-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .map-header h2 {
+    font-size: 35px;
+  }
+
+  .map-frame-wrapper {
+    min-height: 360px;
+  }
+
+  .map-frame-wrapper iframe {
+    height: 360px;
+  }
+
+  .map-location-card {
+    gap: 10px;
+
+    padding: 13px;
+  }
+
+  .map-location-card strong {
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.map-directions-button:focus-visible {
+  outline: 2px solid #C9A45C;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .map-directions-button {
+    transition: none;
+  }
+}

@@ -1,0 +1,815 @@
+/* =========================================================
+   DELIGHT SPA AJMER — PREMIUM OFFER POPUP
+   Luxury Pink / Plum / Champagne Design
+========================================================= */
+
+
+/* =========================================================
+   COLOR SYSTEM
+========================================================= */
+
+:root {
+  --popup-primary: #8F0463;
+  --popup-primary-dark: #680447;
+  --popup-plum: #4A0637;
+
+  --popup-rose: #C86AA6;
+  --popup-gold: #C9A45C;
+  --popup-gold-light: #E5CC98;
+
+  --popup-ink: #210B19;
+  --popup-text: #321326;
+  --popup-muted: #806A79;
+
+  --popup-bg: #FFFFFF;
+  --popup-soft: #FCF7FA;
+  --popup-blush: #F8EAF3;
+  --popup-border: #E8D6E2;
+
+  --popup-whatsapp: #25D366;
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.offer-popup-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(143, 4, 99, 0.12),
+      transparent 35%
+    ),
+    rgba(25, 5, 20, 0.76);
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  animation:
+    offerOverlayFade
+    0.35s
+    ease
+    forwards;
+}
+
+
+/* =========================================================
+   MAIN CARD
+========================================================= */
+
+.offer-popup-card {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 455px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(232, 214, 226, 0.95);
+
+  border-radius: 8px;
+
+  background: #FFFFFF;
+
+  box-shadow:
+    0 35px 100px rgba(33, 11, 25, 0.30),
+    0 12px 35px rgba(143, 4, 99, 0.12);
+
+  animation:
+    offerPopupScale
+    0.5s
+    cubic-bezier(0.16, 1, 0.3, 1)
+    forwards;
+}
+
+
+/* =========================================================
+   PREMIUM TOP ACCENT
+========================================================= */
+
+.offer-popup-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  height: 4px;
+
+  z-index: 10;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5E0644 0%,
+      #8F0463 30%,
+      #C86AA6 55%,
+      #C9A45C 75%,
+      #8F0463 100%
+    );
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.offer-popup-close {
+  position: absolute;
+
+  top: 14px;
+
+  right: 14px;
+
+  z-index: 20;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 39px;
+
+  height: 39px;
+
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  color: #FFFFFF;
+
+  background:
+    rgba(33, 11, 25, 0.68);
+
+  backdrop-filter: blur(10px);
+
+  -webkit-backdrop-filter: blur(10px);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.15);
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.offer-popup-close:hover {
+  color: #FFFFFF;
+
+  background: #8F0463;
+
+  border-color: #C86AA6;
+
+  transform:
+    rotate(90deg)
+    scale(1.06);
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.offer-popup-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 355px;
+
+
+  overflow: hidden;
+
+  background: #F8EAF3;
+}
+
+.offer-popup-image {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+
+  filter:
+    saturate(0.94)
+    contrast(1.02);
+
+  transition:
+    transform 0.8s
+    cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.5s ease;
+}
+
+.offer-popup-card:hover .offer-popup-image {
+  transform: scale(1.045);
+
+  filter:
+    saturate(1.03)
+    contrast(1.03);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.offer-popup-image-overlay {
+  position: absolute;
+
+  inset: auto 0 0;
+
+  padding: 70px 25px 21px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(33, 11, 25, 0.90) 0%,
+      rgba(74, 6, 55, 0.60) 40%,
+      rgba(94, 6, 68, 0.10) 75%,
+      transparent 100%
+    );
+}
+
+.offer-popup-image-overlay span {
+  display: inline-flex;
+
+  align-items: center;
+
+  color: #FFFFFF;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.offer-popup-image-overlay span::before {
+  content: "";
+
+  width: 25px;
+
+  height: 1px;
+
+  margin-right: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #C86AA6
+    );
+}
+
+
+/* =========================================================
+   IMAGE GOLD FRAME
+========================================================= */
+
+.offer-popup-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 13px;
+
+  z-index: 5;
+
+  border: 1px solid rgba(229, 204, 152, 0.48);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.offer-popup-content {
+  position: relative;
+
+  padding: 30px 32px 32px;
+
+  text-align: center;
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(143, 4, 99, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      #FFFFFF 0%,
+      #FFFFFF 58%,
+      #FCF7FA 100%
+    );
+}
+
+
+/* =========================================================
+   CONTENT DECORATION
+========================================================= */
+
+.offer-popup-content::before {
+  content: "✦";
+
+  position: absolute;
+
+  top: 15px;
+
+  left: 22px;
+
+  color: #C9A45C;
+
+  font-size: 11px;
+
+  opacity: 0.75;
+}
+
+.offer-popup-content::after {
+  content: "✦";
+
+  position: absolute;
+
+  top: 15px;
+
+  right: 22px;
+
+  color: #C9A45C;
+
+  font-size: 11px;
+
+  opacity: 0.75;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.offer-popup-eyebrow {
+  margin: 0 0 10px;
+
+  color: #8F0463;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 3.2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.offer-popup-content h2 {
+  margin: 0;
+
+  color: #210B19;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 32px;
+
+  font-weight: 400;
+
+  line-height: 1.16;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.offer-popup-description {
+  max-width: 330px;
+
+  margin: 13px auto 18px;
+
+  color: #806A79;
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   PRICE AREA
+========================================================= */
+
+.offer-popup-price {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 13px;
+
+  margin: 15px 0 7px;
+}
+
+.offer-popup-price-label {
+  color: #806A79;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.offer-popup-price strong {
+  position: relative;
+
+  color: #8F0463;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 43px;
+
+  font-weight: 600;
+
+  line-height: 1;
+}
+
+.offer-popup-price strong::after {
+  content: "";
+
+  display: block;
+
+  width: 38px;
+
+  height: 2px;
+
+  margin: 7px auto 0;
+
+  border-radius: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+
+/* =========================================================
+   SMALL TEXT
+========================================================= */
+
+.offer-popup-small-text {
+  margin: 13px 0 23px;
+
+  color: #9B8995;
+
+  font-size: 10px;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.offer-popup-actions {
+  display: flex;
+
+  gap: 10px;
+
+  width: 100%;
+}
+
+.offer-popup-call,
+.offer-popup-whatsapp {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 49px;
+
+  border-radius: 4px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+========================================================= */
+
+.offer-popup-call {
+  border: 1px solid #8F0463;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8F0463,
+      #72034F
+    );
+
+  color: #FFFFFF;
+
+  box-shadow:
+    0 9px 22px rgba(143, 4, 99, 0.20);
+}
+
+.offer-popup-call:hover {
+  background:
+    linear-gradient(
+      135deg,
+      #C86AA6,
+      #8F0463
+    );
+
+  border-color: #C86AA6;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 27px rgba(143, 4, 99, 0.28);
+}
+
+
+/* =========================================================
+   WHATSAPP BUTTON
+========================================================= */
+
+.offer-popup-whatsapp {
+  border: 1px solid rgba(37, 211, 102, 0.30);
+
+  background:
+    rgba(37, 211, 102, 0.055);
+
+  color: #168A50;
+}
+
+.offer-popup-whatsapp:hover {
+  background: #25D366;
+
+  border-color: #25D366;
+
+  color: #FFFFFF;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(37, 211, 102, 0.20);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes offerOverlayFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes offerPopupScale {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(28px)
+      scale(0.91);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .offer-popup-overlay {
+    padding: 15px;
+  }
+
+  .offer-popup-card {
+    max-width: 100%;
+
+    border-radius: 7px;
+  }
+
+  .offer-popup-image-wrapper {
+    height: 320px;
+    object-position: top;
+  }
+
+  .offer-popup-image-overlay {
+    padding:
+      60px
+      20px
+      17px;
+  }
+
+  .offer-popup-content {
+    padding:
+      25px
+      20px
+      23px;
+  }
+
+  .offer-popup-content h2 {
+    font-size: 27px;
+  }
+
+  .offer-popup-description {
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+  }
+
+  .offer-popup-price {
+    gap: 9px;
+
+    margin-top: 13px;
+  }
+
+  .offer-popup-price strong {
+    font-size: 37px;
+  }
+
+  .offer-popup-small-text {
+    margin-bottom: 20px;
+  }
+
+  .offer-popup-actions {
+    gap: 8px;
+  }
+
+  .offer-popup-call,
+  .offer-popup-whatsapp {
+    min-height: 47px;
+
+    font-size: 10px;
+  }
+
+  .offer-popup-close {
+    width: 35px;
+
+    height: 35px;
+
+    top: 12px;
+
+    right: 12px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .offer-popup-overlay {
+    padding: 10px;
+  }
+
+  .offer-popup-image-wrapper {
+    height: 190px;
+  }
+
+  .offer-popup-content {
+    padding:
+      22px
+      17px
+      19px;
+  }
+
+  .offer-popup-content h2 {
+    font-size: 24px;
+  }
+
+  .offer-popup-price strong {
+    font-size: 33px;
+  }
+
+  .offer-popup-actions {
+    flex-direction: column;
+  }
+
+  .offer-popup-call,
+  .offer-popup-whatsapp {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+.offer-popup-close:focus-visible,
+.offer-popup-call:focus-visible,
+.offer-popup-whatsapp:focus-visible {
+  outline: 2px solid #C9A45C;
+
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .offer-popup-overlay,
+  .offer-popup-card,
+  .offer-popup-image,
+  .offer-popup-close,
+  .offer-popup-call,
+  .offer-popup-whatsapp {
+    animation: none;
+
+    transition: none;
+  }
+}

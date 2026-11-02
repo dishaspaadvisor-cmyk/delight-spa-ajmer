@@ -1,0 +1,970 @@
+/* =========================================================
+   DELIGHT SPA AJMER — PREMIUM GALLERY
+   Luxury Magenta + Plum + Champagne Gold
+   ========================================================= */
+
+.gallery-section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 145px 0 130px;
+
+  color: #321326;
+
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(143, 4, 99, 0.065),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 92% 85%,
+      rgba(201, 164, 92, 0.055),
+      transparent 25%
+    ),
+    linear-gradient(
+      180deg,
+      #FCF7FA 0%,
+      #FFFFFF 50%,
+      #FCF7FA 100%
+    );
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+   ========================================================= */
+
+.gallery-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: -230px;
+  right: -190px;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(143, 4, 99, 0.085),
+      rgba(143, 4, 99, 0.025) 45%,
+      transparent 72%
+    );
+
+  filter: blur(4px);
+
+  pointer-events: none;
+}
+
+
+.gallery-section::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: -210px;
+  left: -170px;
+
+  width: 450px;
+  height: 450px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(201, 164, 92, 0.065),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.gallery-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(
+    1440px,
+    calc(100% - 100px)
+  );
+
+  margin: 0 auto;
+}
+
+
+.gallery-page {
+  min-height: 100svh;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.gallery-header {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 78px;
+}
+
+
+.gallery-heading-content {
+  max-width: 680px;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.gallery-eyebrow {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  margin: 0 0 22px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  line-height: 1.4;
+
+  text-transform: uppercase;
+
+  color: #8F0463;
+}
+
+
+.gallery-eyebrow::before {
+  content: "";
+
+  width: 32px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.gallery-title {
+  position: relative;
+
+  margin: 0 0 22px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      46px,
+      5.2vw,
+      72px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.03;
+
+  letter-spacing: -2.7px;
+
+  color: #210B19;
+}
+
+
+/* Elegant title underline */
+
+.gallery-title::after {
+  content: "";
+
+  display: block;
+
+  width: 58px;
+  height: 2px;
+
+  margin-top: 25px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #C9A45C,
+      #8F0463
+    );
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.gallery-subtitle {
+  max-width: 530px;
+
+  margin: 0;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  color: #806A79;
+}
+
+
+.gallery-subtitle span {
+  padding-bottom: 4px;
+
+  border-bottom:
+    1px solid
+    rgba(201, 164, 92, 0.65);
+
+  color: #72034F;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.gallery-navigation {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding-bottom: 5px;
+}
+
+
+.gallery-nav-btn {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  color: #72034F;
+
+  background: #FFFFFF;
+
+  border:
+    1px solid
+    #E8D6E2;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 22px
+    rgba(94, 6, 68, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+.gallery-nav-btn:hover:not(:disabled) {
+  transform: translateY(-3px);
+
+  color: #FFFFFF;
+
+  background:
+    linear-gradient(
+      135deg,
+      #8F0463,
+      #72034F
+    );
+
+  border-color: #8F0463;
+
+  box-shadow:
+    0 12px 28px
+    rgba(143, 4, 99, 0.20);
+}
+
+
+.gallery-prev:hover:not(:disabled) {
+  transform:
+    translateY(-3px);
+}
+
+
+.gallery-nav-btn:disabled {
+  opacity: 0.28;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   SLIDER
+   ========================================================= */
+
+.gallery-slider {
+  display: flex;
+
+  gap: 34px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding:
+    5px
+    5px
+    18px;
+}
+
+
+.gallery-slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   GALLERY ITEM
+   ========================================================= */
+
+.gallery-item {
+  position: relative;
+
+  flex:
+    0 0
+    calc(
+      (100% - 68px) / 3
+    );
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.gallery-image-wrapper {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  height: 500px;
+
+  background: #FCF0F7;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 22px 55px
+    rgba(94, 6, 68, 0.11);
+
+  transform: translateZ(0);
+
+  transition:
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
+}
+
+
+/* Elegant gold frame */
+
+.gallery-image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 10px;
+
+  z-index: 3;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.26);
+
+  border-radius: 8px;
+
+  pointer-events: none;
+
+  opacity: 0.8;
+
+  transition:
+    opacity 0.4s ease,
+    inset 0.5s ease;
+}
+
+
+.gallery-item:hover
+.gallery-image-wrapper {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 30px 70px
+    rgba(94, 6, 68, 0.17);
+}
+
+
+.gallery-item:hover
+.gallery-image-wrapper::before {
+  inset: 14px;
+
+  opacity: 1;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.gallery-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    saturate(0.92)
+    contrast(1.01);
+
+  transition:
+    transform 1s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    filter 0.8s ease;
+}
+
+
+.gallery-item:hover
+.gallery-image {
+  transform: scale(1.065);
+
+  filter:
+    saturate(1.03)
+    contrast(1.03);
+}
+
+
+/* =========================================================
+   OVERLAY
+   ========================================================= */
+
+.gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(94, 6, 68, 0.04) 0%,
+      transparent 40%,
+      rgba(26, 7, 21, 0.62) 100%
+    );
+
+  opacity: 0.78;
+
+  transition:
+    opacity 0.5s ease;
+}
+
+
+.gallery-item:hover
+.gallery-overlay {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   TOP GOLD ACCENT
+   ========================================================= */
+
+.gallery-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  z-index: 5;
+
+  background:
+    linear-gradient(
+      90deg,
+      #8F0463,
+      #C9A45C,
+      #8F0463
+    );
+
+  transform:
+    scaleX(0);
+
+  transform-origin: left;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.gallery-item:hover
+.gallery-image-wrapper::after {
+  transform:
+    scaleX(1);
+}
+
+
+/* =========================================================
+   INSTAGRAM ICON
+   ========================================================= */
+
+.gallery-instagram {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  color: #FFFFFF;
+
+  background:
+    rgba(94, 6, 68, 0.76);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.30);
+
+  border-radius: 50%;
+
+  backdrop-filter: blur(8px);
+
+  -webkit-backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(26, 7, 21, 0.15);
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+.gallery-item:hover
+.gallery-instagram {
+  transform:
+    scale(1.12)
+    rotate(-4deg);
+
+  color: #FFFFFF;
+
+  background:
+    #8F0463;
+
+  border-color:
+    rgba(255, 255, 255, 0.45);
+}
+
+
+/* =========================================================
+   USERNAME
+   ========================================================= */
+
+.gallery-username {
+  position: absolute;
+
+  bottom: 25px;
+  left: 25px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding:
+    8px
+    11px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.4px;
+
+  color: #FFFFFF;
+
+  background:
+    rgba(26, 7, 21, 0.34);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.20);
+
+  border-radius: 999px;
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
+}
+
+
+.gallery-small-diamond {
+  font-size: 11px;
+
+  color: #E5CC98;
+}
+
+
+/* =========================================================
+   BOTTOM LINE
+   ========================================================= */
+
+.gallery-bottom-line {
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  margin-top: 90px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: #8F0463;
+
+  text-transform: uppercase;
+}
+
+
+.gallery-bottom-line div {
+  flex: 1;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(143, 4, 99, 0.28),
+      rgba(201, 164, 92, 0.72),
+      rgba(143, 4, 99, 0.28),
+      transparent
+    );
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+  .gallery-container {
+    width:
+      calc(100% - 70px);
+  }
+
+  .gallery-item {
+    flex:
+      0 0
+      calc(
+        (100% - 34px) / 2
+      );
+  }
+
+  .gallery-image-wrapper {
+    height: 450px;
+  }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .gallery-section {
+    padding:
+      92px
+      0
+      82px;
+  }
+
+  .gallery-container {
+    width:
+      calc(100% - 40px);
+  }
+
+  .gallery-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 30px;
+
+    margin-bottom: 48px;
+  }
+
+  .gallery-title {
+    font-size: 46px;
+
+    letter-spacing: -1.4px;
+  }
+
+  .gallery-navigation {
+    align-self: flex-end;
+
+    gap: 9px;
+  }
+
+  .gallery-nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .gallery-item {
+    flex:
+      0 0 82%;
+  }
+
+  .gallery-slider {
+    gap: 20px;
+
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  .gallery-image-wrapper {
+    height: 440px;
+
+    border-radius: 10px;
+  }
+
+  .gallery-instagram {
+    top: 20px;
+    left: 20px;
+  }
+
+  .gallery-username {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .gallery-bottom-line {
+    margin-top: 65px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .gallery-section {
+    padding:
+      78px
+      0
+      68px;
+  }
+
+  .gallery-container {
+    width:
+      calc(100% - 28px);
+  }
+
+  .gallery-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .gallery-title {
+    font-size: 40px;
+
+    line-height: 1.06;
+  }
+
+  .gallery-subtitle {
+    font-size: 13px;
+
+    line-height: 1.8;
+  }
+
+  .gallery-item {
+    flex:
+      0 0 88%;
+  }
+
+  .gallery-image-wrapper {
+    height: 395px;
+
+    border-radius: 9px;
+  }
+
+  .gallery-image-wrapper::before {
+    inset: 8px;
+  }
+
+  .gallery-item:hover
+  .gallery-image-wrapper::before {
+    inset: 10px;
+  }
+
+  .gallery-instagram {
+    top: 17px;
+    left: 17px;
+
+    width: 38px;
+    height: 38px;
+  }
+
+  .gallery-username {
+    bottom: 17px;
+    left: 17px;
+
+    font-size: 8px;
+  }
+
+  .gallery-bottom-line {
+    gap: 15px;
+
+    margin-top: 58px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+  }
+
+  .gallery-bottom-line
+  span:last-child {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .gallery-container {
+    width:
+      calc(100% - 24px);
+  }
+
+  .gallery-title {
+    font-size: 36px;
+  }
+
+  .gallery-item {
+    flex-basis: 90%;
+  }
+
+  .gallery-image-wrapper {
+    height: 370px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-image,
+  .gallery-nav-btn,
+  .gallery-instagram,
+  .gallery-image-wrapper,
+  .gallery-image-wrapper::before,
+  .gallery-image-wrapper::after {
+    transition: none;
+  }
+
+  .gallery-slider {
+    scroll-behavior: auto;
+  }
+
+  .gallery-item:hover
+  .gallery-image {
+    transform: none;
+  }
+}
